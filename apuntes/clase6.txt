@@ -1,0 +1,24 @@
+BEM es la metodología que vamos a usar a lo largo del curso. El objetivo de BEM es dividir lógicamente las piezas de las que se compone una web.
+
+BEM establece que debemos usar clases para nuestro selectores, clases que se dividen en:
+
+Bloques. Los bloques son nuestros contenedores más grandes que a su vez contienen elementos u otros bloques.
+Elementos. Los elementos siempre forman parte de un bloque, normalmente son los botones, textos, imágenes etc.
+Modificadores. Los modificadores se usan para establecer estilos diferentes a un mismo bloque o elemento.
+
+
+
+6.-Introducción a BEM
+Block Element Modifier (BEM), creada por yandex (google de Rusia) para proyectos web grandes o pequeños. Su objetivo es dividir lógicamente las piezas de las que se compone una web.
+
+Los bloques son módulos que no dependen de otra parte de la página, son individuales. Como un menú o header.
+
+El elemento es la parte básica de un bloque y este depende del bloque. Son todas las partes que componen al bloque, por ejemplo: Los botones, logos o cualquier otra parte del módulo.
+
+En el caso de que se requiera una variación de ese bloque usamos el modificador, que siguen siendo elementos dependientes de un bloque pero son modificaciones a estos.
+
+Ventajas:
+
+Menos repeticiones.
+Independencia absoluta.
+Mejoría en la herencia múltiple. El bloque ni los elementos dependen de otros.

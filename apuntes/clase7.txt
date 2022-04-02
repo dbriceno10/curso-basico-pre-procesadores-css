@@ -1,0 +1,40 @@
+La meta de tener una guía de código es hacer que luzca como si una sola persona lo haya escrito para que se entendible por todo el equipo.
+
+Para nuestro proyecto PlatziGames vamos a tener una guía en la que definimos:
+
+Ser consistentes con la indentación.
+Consistencia con espacios, corchetes, puntos y comas.
+Consistencia de números, de selectores y divisiones.
+Agrupaciones de propiedades.
+Uso de ID’s y clases.
+Archivos de la clase
+guia-de-codigo-platzi-games.pdf
+Lecturas recomendadas
+
+Shopify Polaris
+
+https://polaris.shopify.com
+
+
+Lightning Design System
+
+https://lightningdesignsystem.com
+
+
+Atlassian Design
+
+https://atlassian.design
+
+Platzi Games
+
+PRINCIPIOS
+ESTRUCTURA
+Mantenerlo simple y reusar lo más posible.
+Un código que luzca como si una sola persona lo haya escrito
+Escribir para escalabilidad.
+GENERALES
+Usamos BEM como metodología de creación de código
+Nombre de archivos en plural (Ejemplo: _botones.scss)
+Clases en singular y minúsculas (Ejemplo: .galeria__boton)
+Nombrar imágenes relativas a su bloque. (Ejemplo: icono-busqueda.png)
+PlatziGames

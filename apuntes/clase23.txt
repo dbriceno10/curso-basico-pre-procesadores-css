@@ -1,0 +1,6 @@
+Si desean sass solo para este proyecto:
+
+npm install sass -D  
+luego para que este compilando en tiempo real cada cambio:
+
+npx sass --watch ./css/ejercicio-sass.scss ejercicio-sass.css

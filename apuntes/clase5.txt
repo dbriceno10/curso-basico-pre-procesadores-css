@@ -1,0 +1,14 @@
+Hay muchas naming conventions que puedes utilizar para nombrar a tus elementos y evitar la especificidad, la más popular es BEM, pero a continuación anexo algunos otros para que elijan
+
+Metodologías para estructurar tu HTML+CSS (con naming conventions):
+BEM (Bloque, elemento, modificador)
+BEMIT (BEM + Triángulo invertido)
+ABEM (Atomic BEM)
+ITCSS (CSS de triángulo invertido)
+SMACSS
+ACSS (Atomic CSS)
+OOCSS (CSS orientado a objetos)
+AMCSS (Atribute Model CSS)
+SUIT CSS naming conventions
+
+https://platzi.com/blog/estado-css-2019/

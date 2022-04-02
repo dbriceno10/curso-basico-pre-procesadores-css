@@ -1,0 +1,126 @@
+Los selectores nos sirven para seleccionar los diferentes elementos en una página web y aplicar estilos
+
+Existen los siguientes tipos de selectores:
+
+Selector universal * Sirve para agregar estilos a todos los elementos de la página. Normalmente se utiliza para hacer “reset” de estilos.
+Selector etiqueta. Aplica estilos a todos los elementos de ese tipo (p, h1, header etc.)
+Selector id. Aplica estilos a un elemento único con ese Id, se recomienda hacer buen uso de este selector.
+Selector clase. Aplica estilos a todos los elementos con esa clase (el que más vas a usar).
+Selector anidado. Aplica estilos a un elementos descendientes de otros elementos (no necesario que sea hijo directo).
+Selector hijo >. Aplica estilos a los elementos que sean hijos directos de otros.
+Selector adyacente +. Aplica estilos al elemento adyacente.
+Selector de atributo input[type=“number”]. Aplica estilos al elemento con el atributo especificado.
+La prioridad de un selector se determina por la suma de su contenido:
+
+ID = 100
+Clase = 10
+Etiqueta = 1
+A mayor la suma, mayor prioridad.
+
+!important es un valor especial tiene un valor de un millón, nunca lo uses a menos que sea tu única opción como cuando no tienes acceso al código fuente.
+
+
+Les comparto mis notas de la clase:
+
+/* Selector universal */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Selector de etiqueta */
+p {
+  color: blue;
+}
+h1,h2,h3,h4,h5 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: black;
+}
+
+/* Selector anidado (Para especificar selectores dentro de otros)*/
+span {
+  color: black;
+}
+p span {
+  color: red;
+}
+
+/* Selector de ID (Debe ser único en HTML, no se puede repetir)*/
+#verde {
+  color: green;
+}
+
+/* Selector de clase (Puede estar presente en varios elementos HTML, es el más usado) */
+.verde {
+  color: green;
+}
+
+/* Selector de hijos (Se aplica para hijos directos) */
+p > span {
+  color: red;
+}
+span {
+  color: green;
+}
+
+/* Selector adyacente (Se aplica si esta seguido del elemento especificado, en este caso se aplica el color rojo al elemento h2 si está después de otro elemento h2 y así sucesivamente se puede sumar más elementos) */
+h2 {
+  color: black;
+}
+h2 + h2 {
+  color: red;
+}
+
+/* Selector de aributos */
+input[type='number'] {
+  border: black;
+}
+input[type='email'] {
+  border: red;
+}
+/*
+!important = 1000000
+ID = 100 puntos
+Clase = 10 puntos
+Etiqueta = 1 punto
+Los puntajes son acumulables
+*/
+
+
+span {
+  color: black;
+} /* 1 punto*/
+h2.especial span {
+  color: red;
+} /* 12 puntos */
+h2#superespecial span {
+  color: green;
+} /* 102 puntos */
+
+
+h2.special span {
+  color: red; 
+} /* 12 puntos (Gana) */
+.especial span {
+  color: black;
+} /* 11 puntos */
+
+span {
+  color: black !important;
+} /* 1000000 puntos (Por buenas prácticas no es recomendable usarlo ya que es muy difícil sobrescribirlo, solo se usa en caso que no se tenga acceso al código CSS y se necesite sobrescribir un valor. "Por cada uso de !important muere un oso en el ártico :(")*/
+
+
+falto el selector ~ (General de hermanos) que es el que en realidad el de selecciona todos los hermanos siguientes al primer selector que cumplan con el selector 2
+Ejemplo:
+div ~ p {}
+
+❌<p>Parrafo</p>
+❌<div>
+	❌<p>Parrafo</p>
+</div>
+✅<p>Parrafo</p>
+✅<p>Parrafo</p>
+❌<div>
+	❌<p>Parrafo</p>
+</div>
+✅<p>Parrafo</p>
