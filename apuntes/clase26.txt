@@ -1,0 +1,15 @@
+Mixins
+
+Su finalidad es ofrecer una funcionalidad que pueda ser reutilizada en otras clases pero que no está pensada para usarse de forma autónoma. Nos permite crear bloques reusables de código que cambian su resultado dependiendo del parámetro que enviemos.
+
+Con los mixin logramos escribir menos código, produciendo un código más claro, más expresivo y sobre todo más fácil de mantener.
+
+
+
+Si se fijan, los conceptos de Extends y Mixins son muy parecidos. Vamos a explicar dos diferencias entre ellos que son claves para un entendimiento más claro:
+
+Una de las mayores diferencias con los Extends, es que los Mixins pueden recibir argumentos, los cuales te permitirán producir una gran variedad de estilos con unas simples líneas.
+
+La impresión en CSS de los Mixins, no es la misma que tienen los Extends. Estos se imprimen separados en cada uno de los lugares donde fueron declarados.
+
+Ya tenemos un poco más claro cuales son las diferencias entre estas importantes características de Sass. Recuerden, los Extends los usaremos para compartir fragmentos de estilos idénticos entre componentes y los Mixins para reutilizar fragmentos de estilos que puedan tener un resultado diferente en cada lugar donde los declaremos.
