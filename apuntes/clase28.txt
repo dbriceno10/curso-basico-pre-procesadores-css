@@ -1,0 +1,48 @@
+Acerca del Loop, la variable creada $header representa a los ‘h’ (h1, h2, h3) y la variable creada $size representa a sus valores de los ‘h’(30px, 25px, 20px). Luego se invoca a la variable $header como una función, que dice que a cada ‘h’ del header dependiedo si es h1, h2 o h3 se le cambiara el font-size a su valor respectivo, si el $header es un h1 se le pondrá 30px y así respectivamente y a cada ‘h’ del $header se le quita el margin. En sí le puedes poner cualquier nombre a la variable $header y a la variable $size y igual funcionará es solo para representar los ‘h’ y sus valores (30px). También en el ejemplo del profe el loop no sobreescribe el font-size en los ‘h’ ya que previamente se les declaró ya un font-size, en vez de eliminar uno por uno yo solo le puse !important al loop y se solucionó.
+
+
+Sass admite cuatro reglas de control de flujo:
+
+@if and @else: Controla si se evalúa o no un bloque
+
+@each: evalúa un bloque para cada elemento de la lista o par en un mapa.
+
+@for: evalúa un bloque cierto numero de veces
+
+@while: evalúa un bloque hasta que se cumpla cierta condición.
+
+Link: https://sass-lang.com/documentation/at-rules/control
+
+
+
+En esta clase se resuleve el problema de quitar los margenes que vienen por defecto en los titulos. Usamos el loop para poner el ejemplo, pero la mejor manera de hacer eso seria asi:
+
+h1, h2, h3, h4, h5{
+  margin: 0;
+}
+
+
+¿Qué es un each?
+Es un ciclo o loop que creamos para replicar automáticamente uno o varios valores previamente definidos a uno o varios elementos simultaneamente.
+
+¿Qué ventajas tiene?
+Solo lo defines y se aplica desde el archivo global automáticamente a todos los módulos.
+
+¿Cómo se construye?
+El each requiere dos variables, la primera indicará que vas a cambiar y la segunda lo que vas a cambiar. Definido esto dentro de los ( ) agregamos lo que vamos a cambiar en ubicación, es decir el elemento y luego agregamos despues de : el atributo que deseemos.
+abrimos { } y dentro de estos ingresamos lo siguiente:
+
+#{$variable que indica que cambiaremos} {
+	elAtributo que cambiaremo: y que le aplicaremos;
+	tambíen si queremos agregar algo más;
+	}
+}
+y queda de la siguiente forma:
+
+
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px){
+    #{$header} {
+        font-size: $size;
+        margin: 0;
+    }
+}

@@ -21,13 +21,33 @@ $color-variacion: #3f579a;
   @return rgba($color, $nivel);
 }
 
+//Condicionales y Loops
+// el each, a diferencia de las funciones y los mixins no hay que usarlos en ninguna otra parte, al crearlo se ejecuta acá de forma automática
+@each $header, $size in (h1: 30px, h2: 25px, h3: 20px) {
+  #{$header} {
+    font-size: $size;
+    margin: 0;
+  }
+}
+
+// Mixin con un condicional
+@mixin titulos($fuente) {
+  @if $fuente == $Fuente1 {
+    font-family: $Fuente1;
+  } @else {
+    font-family: $Fuente2;
+    text-transform: uppercase;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
-  font-family: $Fuente1;
+  // font-family: $Fuente1;
+  @include titulos($Fuente1);
 }
 
 main {
@@ -35,3 +55,16 @@ main {
   width: 100%;
   height: 100vh;
 }
+
+// h1 {
+//   font-size: 30px;
+//   margin: 0;
+// }
+// h2 {
+//   font-size: 25px;
+//   margin: 0;
+// }
+// h3 {
+//   font-size: 20px;
+//   margin: 0;
+// }
