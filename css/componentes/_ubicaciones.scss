@@ -21,5 +21,6 @@
     text-transform: uppercase;
     font-size: 12px;
     font-family: $Fuente2;
+    color: get-opacity($color-claro, 0.5);
   }
 }

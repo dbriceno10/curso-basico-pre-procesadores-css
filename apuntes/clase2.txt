@@ -1,0 +1,49 @@
+En pocas palabras…
+Los **mixins **nos ayudan a reutilizar código en otras partes y evitar hacer código muy repetitivo.
+Las **funciones **hacen un calculo y por lo general reciben un parametro y retornar un valor
+
+
+
+
+La función hecha en el video no es un buen ejemplo.
+
+Se declara una función con el fin de alterar la opacidad de un color que se pasa como parámetro.
+
+@function get-opacity($color,$nivel){
+    @return rgba($color,$nivel);
+}
+Pero dentro la función lleva otra función que ya realiza ese fin, por lo que hay una redundancia.
+
+Se podría usar directamente la función
+
+@rgba($color,$nivel);
+Si no, vean este ejemplo.
+Sass
+
+@function get-opacity($color,$nivel){
+    @return rgba($color,$nivel);
+}
+body{
+    background-color: rgba(#08d9d6,0.3);
+    color: get-opacity(#08d9d6,0.3);
+}
+El anterior código da como resultado el siguiente CSS
+
+body {
+  background-color: rgba(8, 217, 214, 0.3);
+  color: rgba(8, 217, 214, 0.3);
+}
+
+
+
+
+
+
+
+Las funciones en Sass son parecidas a los mixin, ya que ambos pueden acceder a variables globales que estén declaradas en el archivo y pueden aceptar argumentos; sin embargo, una de las diferencias principales es que para declarar una función se debe utilizar la palabra @function seguida del nombre de la función que queramos declarar, y entre paréntesis podremos pasar los argumentos que necesite nuestra función. Además, al terminar de crear nuestra función, es necesario utilizar un @return seguido de lo que retornaría después de su ejecución.
+
+Ejemplo:
+
+@function numero($num: 500px){
+  @return  $num/2;
+}
