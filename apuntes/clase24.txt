@@ -1,0 +1,10 @@
+En sass hay dos maneras de escribir la sintaxis, la primera es con la extensión “.sass” que se obvia los “{ }” y el " ; ", y la otra es con la extensión “.scss” que es igual que escribir css con “{ }” y " ; " .
+.sass es la manera vieja.
+.scss es la nueva manera.
+
+
+
+Buenas practicas tomadas de esta clase
+Antes de nombrar a un bloque de código, hay que pensar si ese bloque nos servirá para futuras ocasiones, como en el caso de “Seguidores” en nuestro proyecto de este curso. Si el bloque si nos servirá en futuras ocasiones, entonces no hay que nombrar con la metodología BEM, ya que eso puede romper ciertas partes de código en otros archivos html. Eso nos ayuda con la modularizarían y la reutilización de código.
+Las variables deben ir hasta arriba
+Los nombres de las variables tienen que ser genéricos, tales como fuente1, color-primario, etc. Esto es porque estas variables pueden cambiar. Y teniendo un nombre genérico, no nos vamos a confundir al momento de cambiar una variable.

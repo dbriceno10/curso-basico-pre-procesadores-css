@@ -4,3 +4,17 @@ npm install sass -D
 luego para que este compilando en tiempo real cada cambio:
 
 npx sass --watch ./css/ejercicio-sass.scss ejercicio-sass.css
+
+Linea de comandos
+Para poder instalar sass de manera global en nuestro PC es necesario tener instalado nodejs y npm. Puedes revisar mi entrada sobre npm como instalar ambas herramientas.
+
+Una vez teniendo esta instalación, procedemos a instalar sass desde npm con el siguiente comando:
+
+npm install -g sass
+Una vez teniendo instalado sass en nuestro equipo ahora debemos indicarle desde la linea de comandos que archivo vamos a estar observando para que lo compile y obtengamos de salida un archivo con la extension css.
+
+sass --watch input.scss output.css
+O en su defecto también podemos observar una carpeta donde estén nuestros archivos sass utilizando las rutas de entrada y salida separadas por dos puntos (:), puedes ver un ejemplo a continuación:
+
+sass --watch app/sass:public/stylesheets
+Puedes tambien revisar el paso a paso desde la documentación oficial de sass.
