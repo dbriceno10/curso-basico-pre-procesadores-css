@@ -1,0 +1,47 @@
+@extend & @import en Sass
+.
+@extend funciona para que un elemento herede todas las propiedades y valores de una clase que le tenemos que especificar. Por ejemplo:
+
+.class2{
+  @extend .class1;
+}
+.
+En el caso del @import, lo que hacemos es importar las propiedades de un archivo extension “scss”, aunque OJO, los archivos que van a ser importados deben tener un guion bajo al inicio. Esto le dice al preprocesador que ese archivo no tiene que ser compilado. Un ejemplo de un archivo a ser importado es: _footer.scss
+@import se usa de la siguiente manera:
+
+@import "./elementos/footer.scss"
+Hay que tener en cuenta que no usamos una bandera de url() antes de escribir la dirección del archivo a importar y que el archivo en el documento que se compila ya no tiene el guion bajo.
+
+Para los que le da crash el VSCode al momento de hacer el “@import” con la extensión de Liver SASS server solo tienen que entrar al archivo settings.json y agregar la siguiente linea
+"color-highlight.languages": [ “*”, “!scss” ]
+
+Con esto ya deberia ir bien todo
+
+
+Extends es una funcionalidad de los preprocesadores de CSS que nos permite replicar un estilo existente en otro lugar que comparta las mismas o muy parecidas características.
+
+**¿Cómo lo usamos? **
+
+Primero observamos dónde podemos necesitar replicar un estilo, y luego vamos a escribir sobre el elemento o bloque que queramos aplicarlo.
+
+Luego hacemos uso de:
+
+@extends
+y seguido agregamos de dónde queremos que copie y aplique ese estilo en particular.
+
+@extends .perfil__titulo;
+Listo.
+
+
+VSCode crashea cuando escribes @imports
+Desde marzo del 2019, Ruby Sass ha evolucionado a Dart Sass. Esta actualización trajo algunos cambios. Aunque @import sigue funcionando ya se considera anticuado y no se incentiva su uso. Ahora es preferible usar @use.
+Por esto, la extensión de Live Sass Compiler de Ritwick Dey presenta errores que hace que tu VSCode se quiebre. En cambio, te sugiero usar la extensión “Live Sass Compiler de Glenn Marks” que es una versión que sí soporta Dart Sass y tiene mantenimiento aún en 2022.
+.
+Para entender el uso de @use y @forward este video mencionado por uno de los compañeros resulta muy útil.
+.
+Lo que tendrías que hacer en este ejercicio es…
+
+Agregar la siguiente línea a cada uno de los componentes (perfiles.scss - estadisticas.scss - ubicaciones.scss). Nota: as * permite obviar la característica del namespacing que necesita @use.
+@use 'globales' as * ;
+Cambiar todo @import por @use en tu archivo ejercicio-sass.scss.
+Ya no necesitas poner @use ‘globales’ en el archivo ejercicio-sass.scss.
